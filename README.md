@@ -3,7 +3,7 @@
 
 ## Getting started
 
-`$ npm install react-native-wps@https://github.com/1uokun/react-native-wps.git --save`
+`$ npm install react-native-wps@https://github.com/zhijiasoft/react-native-wps.git --save`
 
 ### Mostly automatic installation
 
