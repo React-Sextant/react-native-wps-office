@@ -165,9 +165,11 @@ catch (e) {
 ### API
 
 #### `open(String[] args): Promise<string>`
-三个必填参数，分别是：
+两个必填参数，分别是：
 ```
 filePath: String;   //文件外部存储地址，如/storage/emulated/0/Android/data/com.demo/files/test.pdf
-your.package.name.fileprovider: String,;    //当前app包名+fileprovider，如"com.demo.app.fileprovider"
-fileType: String;   //文件类型,如："application/pdf"
+fileType: String;   //mime type of file,eg:"application/pdf"
 ```
+
+### Reference
+ - [1] [Office 2007 File Format MIME Types for HTTP Content Streaming](https://blogs.msdn.microsoft.com/vsofficedeveloper/2008/05/08/office-2007-file-format-mime-types-for-http-content-streaming-2/)

@@ -38,7 +38,6 @@ public class WpsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void open(
             String UriFromReact,
-            String myPackageName,
             String Mode,
             Promise promise
     ){
@@ -60,7 +59,7 @@ public class WpsModule extends ReactContextBaseJavaModule {
                 //传递权限，由于7.0以上的手机需要具有文件权限才能打开，不加权限会崩溃
                 Uri uri;
                 if (Build.VERSION.SDK_INT >= 24) {
-                    uri = FileProvider.getUriForFile(getReactApplicationContext(), myPackageName, file);
+                    uri = FileProvider.getUriForFile(getReactApplicationContext(), getReactApplicationContext().getPackageName() + ".app.fileprovider", file);
                 } else {
                     uri = Uri.fromFile(file);
                 }
