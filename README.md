@@ -91,12 +91,12 @@ The following snippet shows you how to add the FileProvider to your `AndroidMani
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapp">
+    package="com.packageName.app">
     <application
         ...>
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.myapp.fileprovider"
+            android:authorities="com.packageName.app.fileprovider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data
@@ -136,7 +136,7 @@ Finally you can send a `ExternalDirectoryPath` by [react-native-fs](https://gith
 import WpsAndroid from 'react-native-wps';
 import {ExternalDirectoryPath,downloadFile} from 'react-native-fs';
 
-const downloadDest = `${RNFS.ExternalDirectoryPath}/test.pdf`;
+const downloadDest = `${ExternalDirectoryPath}/test.pdf`;
 const options = {
     fromUrl: 'http://example.com/test.pdf',
     toFile: downloadDest,
@@ -148,7 +148,6 @@ try {
         console.log('file://' + downloadDest)
         WpsAndroid.open(
             downloadDest,
-            'com.demo.app.fileprovider',
             'application/pdf'
         )
             .then(res=>console.log(res))
@@ -167,8 +166,8 @@ catch (e) {
 #### `open(String[] args): Promise<string>`
 两个必填参数，分别是：
 ```
-filePath: String;   //文件外部存储地址，如/storage/emulated/0/Android/data/com.demo/files/test.pdf
-fileType: String;   //mime type of file,eg:"application/pdf"
+FilePath: String;   //文件外部存储地址，如/storage/emulated/0/Android/data/com.demo/files/test.pdf
+MIMEType: String;   //mime type of file,eg:"application/pdf" See details in Reference[1]
 ```
 
 ### Reference
