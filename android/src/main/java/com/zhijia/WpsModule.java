@@ -39,13 +39,45 @@ public class WpsModule extends ReactContextBaseJavaModule {
     public void open(
             String UriFromReact,
             String MIMETypes,
+            ReadableMap options,
             Promise promise
     ){
         if(isAvilible(getReactApplicationContext(), "cn.wps.moffice_eng")){
             Intent intent = new Intent();
             Bundle bundle = new Bundle();
             //配置wps阅读模式
-            bundle.putString("OpenMode", "ReadOnly");
+            if (options.hasKey("OpenMode")) {
+                bundle.putString("OpenMode", options.getString("OpenMode"));
+            }
+            if (options.hasKey("SendSaveBroad")) {
+                bundle.putBoolean("SendSaveBroad", options.getBoolean("SendSaveBroad"));
+            }
+            if (options.hasKey("SendCloseBroad")) {
+                bundle.putBoolean("SendCloseBroad", options.getBoolean("SendCloseBroad"));
+            }
+            if (options.hasKey("ClearBuffer")) {
+                bundle.putBoolean("ClearBuffer", options.getBoolean("ClearBuffer"));
+            }
+            if (options.hasKey("ClearTrace")) {
+                bundle.putBoolean("ClearTrace", options.getBoolean("ClearTrace"));
+            }
+            if (options.hasKey("ClearFile")) {
+                bundle.putBoolean("ClearFile", options.getBoolean("ClearFile"));
+            }
+            if (options.hasKey("AutoJump")) {
+                bundle.putBoolean("AutoJump", options.getBoolean("AutoJump"));
+            }
+            if (options.hasKey("HomeKeyDown")) {
+                bundle.putBoolean("HomeKeyDown", options.getBoolean("HomeKeyDown"));
+            }
+            if (options.hasKey("BackKeyDown")) {
+                bundle.putBoolean("BackKeyDown", options.getBoolean("BackKeyDown"));
+            }
+            if (options.hasKey("EnterReviseMode")) {
+                bundle.putBoolean("EnterReviseMode", options.getBoolean("EnterReviseMode"));
+            }
+
+
             //设置intent的Action属性
             intent.setAction(Intent.ACTION_VIEW);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
