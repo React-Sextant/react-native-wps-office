@@ -19,9 +19,9 @@ import com.facebook.react.bridge.ReadableMap;
 import java.io.File;
 import java.util.List;
 
-public class WpsModule extends ReactContextBaseJavaModule {
+public class WPSOfficeModule extends ReactContextBaseJavaModule {
 
-    public WpsModule(ReactApplicationContext reactContext) {
+    public WPSOfficeModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
@@ -115,6 +115,6 @@ public class WpsModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "WpsAndroid";
+        return "WPSOffice";
     }
 }

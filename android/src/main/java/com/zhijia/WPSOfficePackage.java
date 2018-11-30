@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class WpsPackage implements ReactPackage {
+public class WPSOfficePackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
@@ -22,7 +22,7 @@ public class WpsPackage implements ReactPackage {
             ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
-        modules.add(new WpsModule(reactContext));
+        modules.add(new WPSOfficeModule(reactContext));
 
         return modules;
     }

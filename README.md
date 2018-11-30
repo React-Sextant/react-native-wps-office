@@ -34,7 +34,7 @@
     ```java
     ...
     // 1. Import the plugin class.
-   import com.zhijia.WpsPackage;
+   import com.zhijia.WPSOfficePackage;
     
     public class MainApplication extends Application implements ReactApplication {
     
@@ -46,7 +46,7 @@
                 // existing packages.
                 return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
-                    new WpsPackage()
+                    new WPSOfficePackage()
                 );
             }
         };
@@ -61,7 +61,7 @@
     ...
     // 1. Import the plugin class (if you used RNPM to install the plugin, this
     // should already be done for you automatically so you can skip this step).
-    import com.zhijia.WpsPackage;
+    import com.zhijia.WPSOfficePackage;
     
     public class MainActivity extends ReactActivity {    
         @Override
@@ -70,7 +70,7 @@
             // existing packages.
             return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-                new WpsPackage()
+                new WPSOfficePackage()
             );
         }
     
@@ -133,7 +133,7 @@ For setting up other directories (cache, external storage, ...) follow the guide
 Finally you can send a `ExternalDirectoryPath` by [react-native-fs](https://github.com/itinance/react-native-fs) to wake up `WPS office` app. 
 
 ```javascript
-import WpsOffice from 'react-native-wps-office';
+import WPSOffice from 'react-native-wps-office';
 import {ExternalDirectoryPath,downloadFile} from 'react-native-fs';
 
 const downloadDest = `${ExternalDirectoryPath}/test.pdf`;
@@ -152,7 +152,7 @@ try {
     const ret = downloadFile(fileOptions);
     ret.promise.then(res => {
         console.log('file://' + downloadDest)
-        WpsOffice.open(
+        WPSOffice.open(
             downloadDest,
             'application/pdf',
             wpsOptions

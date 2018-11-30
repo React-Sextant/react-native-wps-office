@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
 
-const { WpsAndroid } = NativeModules;
+const { WPSOffice } = NativeModules;
 
-module.exports = WpsAndroid ;
+module.exports = WPSOffice ;
