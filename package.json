@@ -1,5 +1,5 @@
 {
-  "name": "react-native-wps",
+  "name": "react-native-wps-office",
   "version": "1.0.0",
   "description": "React Native实现调用wps app打开word/pdf文档",
   "main": "index.js",

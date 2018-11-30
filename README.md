@@ -3,11 +3,11 @@
 
 ## Getting started
 
-`$ npm install react-native-wps@https://github.com/zhijiasoft/react-native-wps.git --save`
+`$ npm install react-native-wps-office@https://github.com/zhijiasoft/react-native-wps-office.git --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-wps`
+`$ react-native link react-native-wps-office`
 
 ### Manual installation
 
@@ -17,13 +17,13 @@
 1. Append the following lines to `android/settings.gradle`:
 
   	```
-  	include ':react-native-wps'
-  	project(':react-native-wps').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-wps/android')
+  	include ':react-native-wps-office'
+  	project(':react-native-wps-office').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-wps-office/android')
   	```
 2. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
     
   	```
-    compile project(':react-native-wps')
+    compile project(':react-native-wps-office')
   	```
 3. Import Package
   
@@ -133,7 +133,7 @@ For setting up other directories (cache, external storage, ...) follow the guide
 Finally you can send a `ExternalDirectoryPath` by [react-native-fs](https://github.com/itinance/react-native-fs) to wake up `WPS office` app. 
 
 ```javascript
-import WpsAndroid from 'react-native-wps';
+import WpsOffice from 'react-native-wps-office';
 import {ExternalDirectoryPath,downloadFile} from 'react-native-fs';
 
 const downloadDest = `${ExternalDirectoryPath}/test.pdf`;
@@ -152,7 +152,7 @@ try {
     const ret = downloadFile(fileOptions);
     ret.promise.then(res => {
         console.log('file://' + downloadDest)
-        WpsAndroid.open(
+        WpsOffice.open(
             downloadDest,
             'application/pdf',
             wpsOptions
