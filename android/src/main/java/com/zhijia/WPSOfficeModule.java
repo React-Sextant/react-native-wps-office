@@ -95,7 +95,7 @@ public class WPSOfficeModule extends ReactContextBaseJavaModule {
                 //传递权限，由于7.0以上的手机需要具有文件权限才能打开，不加权限会崩溃
                 Uri uri;
                 if (Build.VERSION.SDK_INT >= 24) {
-                    uri = FileProvider.getUriForFile(getReactApplicationContext(), getReactApplicationContext().getPackageName() + ".app.fileprovider", file);
+                    uri = FileProvider.getUriForFile(getReactApplicationContext(), getReactApplicationContext().getPackageName() + ".wpsProvider", file);
                 } else {
                     uri = Uri.fromFile(file);
                 }
@@ -109,7 +109,7 @@ public class WPSOfficeModule extends ReactContextBaseJavaModule {
                 promise.reject("文件不存在");
             }
         }else {
-            promise.reject("not install WPS APP!");
+            promise.reject("未安装WPS APP!");
         }
     }
 
