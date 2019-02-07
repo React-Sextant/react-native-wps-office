@@ -1,4 +1,4 @@
-package com.zhijia;
+package com.github.reactSextant;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

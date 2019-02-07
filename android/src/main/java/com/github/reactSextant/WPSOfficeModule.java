@@ -1,4 +1,4 @@
-package com.zhijia;
+package com.github.reactSextant;
 
 
 import android.content.Context;

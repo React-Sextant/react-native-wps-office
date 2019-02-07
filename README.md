@@ -3,7 +3,7 @@
 
 ## Getting started
 
-`$ npm install git+https://git@github.com/zhijiasoft/react-native-wps-office.git --save`
+`$ npm install git+https://git@github.com/react-sextant/react-native-wps-office.git --save`
 
 ### Mostly automatic installation
 
@@ -34,7 +34,7 @@
     ```java
     ...
     // 1. Import the plugin class.
-   import com.zhijia.WPSOfficePackage;
+   import com.github.reactSextant.WPSOfficePackage;
     
     public class MainApplication extends Application implements ReactApplication {
     
@@ -61,7 +61,7 @@
     ...
     // 1. Import the plugin class (if you used RNPM to install the plugin, this
     // should already be done for you automatically so you can skip this step).
-    import com.zhijia.WPSOfficePackage;
+    import com.github.reactSextant.WPSOfficePackage;
     
     public class MainActivity extends ReactActivity {    
         @Override

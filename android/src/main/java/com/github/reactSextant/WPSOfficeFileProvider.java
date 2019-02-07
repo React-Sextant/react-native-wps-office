@@ -1,4 +1,4 @@
-package com.zhijia;
+package com.github.reactSextant;
 
 import android.support.v4.content.FileProvider;
 
