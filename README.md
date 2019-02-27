@@ -34,7 +34,7 @@
     ```java
     ...
     // 1. Import the plugin class.
-   import com.github.reactSextant.WPSOfficePackage;
+   import com.github.react.sextant.WPSOfficePackage;
     
     public class MainApplication extends Application implements ReactApplication {
     
@@ -61,7 +61,7 @@
     ...
     // 1. Import the plugin class (if you used RNPM to install the plugin, this
     // should already be done for you automatically so you can skip this step).
-    import com.github.reactSextant.WPSOfficePackage;
+    import com.github.react.sextant.WPSOfficePackage;
     
     public class MainActivity extends ReactActivity {    
         @Override
