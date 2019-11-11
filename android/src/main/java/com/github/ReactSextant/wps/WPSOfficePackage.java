@@ -1,4 +1,4 @@
-package com.github.react.sextant;
+package com.github.ReactSextant.wps;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

@@ -1,4 +1,4 @@
-package com.github.react.sextant;
+package com.github.ReactSextant.wps;
 
 
 import android.content.Context;

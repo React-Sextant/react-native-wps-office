@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.github.react.sextant">
+          package="com.github.ReactSextant.wps">
 
     <application>
         <provider
