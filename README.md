@@ -2,8 +2,18 @@
 
 
 ## Getting started
+<a href="https://npmjs.org/package/react-native-wps-office"><img alt="npm version" src="http://img.shields.io/npm/v/react-native-wps-office.svg?style=flat-square"></a> <a href="https://npmjs.org/package/react-native-wps-office"><img alt="npm version" src="http://img.shields.io/npm/dm/react-native-wps-office.svg?style=flat-square"></a>
 
-`$ npm install git+https://git@github.com/react-sextant/react-native-wps-office.git --save`
+> android.support.v4
+
+`$ npm install react-native-wps-office@1.0.0 --save`
+
+
+> androidX
+
+`$ npm install react-native-wps-office@1.1.0 --save`
+
+
 
 ### Mostly automatic installation
 
