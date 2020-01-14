@@ -81,6 +81,23 @@
 
 ## Usage
 
+### Open online file in WPS Pffice
+```javascript
+import WPSOffice from 'react-native-wps-office';
+
+const wpsOptions = {
+    "OpenMode":"ReadOnly",//只读模式
+    "ClearTrace": true    //关闭文件时删除使用记录
+};
+
+// no options
+WPSOffice.open(uri)
+
+// with options
+WPSOffice.open(uri,MIMETypes,options)
+
+```
+
 ### Open pdf/docx in WPS Office
 
 Finally you can send a `ExternalDirectoryPath` by [react-native-fs](https://github.com/itinance/react-native-fs) to wake up `WPS office` app. 

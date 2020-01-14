@@ -8,7 +8,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.FileProvider;
+
+import androidx.core.content.FileProvider;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -78,6 +79,7 @@ public class WPSOfficeModule extends ReactContextBaseJavaModule {
                 bundle.putBoolean("EnterReviseMode", options.getBoolean("EnterReviseMode"));
             }
 
+            intent.putExtras(bundle);
 
             //设置intent的Action属性
             intent.setAction(Intent.ACTION_VIEW);
@@ -88,6 +90,14 @@ public class WPSOfficeModule extends ReactContextBaseJavaModule {
             //打开wps
             intent.setClassName("cn.wps.moffice_eng",
                     "cn.wps.moffice.documentmanager.PreStartActivity2");
+
+            if(UriFromReact.contains("http")){
+                intent.setData(Uri.parse(UriFromReact));
+
+                promise.resolve("success");
+                getReactApplicationContext().startActivity(intent);
+                return;
+            }
 
             //读取文件
             File file = new File(UriFromReact);
@@ -100,7 +110,6 @@ public class WPSOfficeModule extends ReactContextBaseJavaModule {
                     uri = Uri.fromFile(file);
                 }
                 intent.setDataAndType(uri,MIMETypes);
-                intent.putExtras(bundle);
 
                 //启动activity
                 promise.resolve("success");
